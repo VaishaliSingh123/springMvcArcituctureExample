@@ -58,30 +58,23 @@ public class StudentController{
         }
     }
 
-   /* @RequestMapping(value="/students/{id}",method=RequestMethod.PUT)
-    public Response  updateStudent(@RequestBody Student student, @PathVariable("id") String id){
-        if(student.getCourses()==null||student.getCourses().size()==0){
-            return new Response(false,"courses can not be empty"
-
-        }else if(student.getName()==null){
-            return new Response(false,"name cannot be null");
-        }else if(student.getDescription()==null){
-            return new Response(false,"Description cannot be null");
-        }
-        else {
+    @RequestMapping(value="/students",method=RequestMethod.PUT)
+    public Response  updateStudent(@RequestBody Student student){
+        //System.out.println("students"+students);
+        if(student.getId()!=null){
             Iterator itr = students.iterator();
-            while (itr.hasNext())
+            for(int i=0; i < students.size(); i++)
             {
-                Student oneStd=(Student)itr.next();
-                if(oneStd.getId().equals(student.getId())){
-                    int index = students.indexOf(oneStd.getId());
-                     students.set(index,student);
-                    return new Response(false,"specific value id updated");
+                if(students.get(i).getId().equals(student.getId())){
+                   // System.out.println("student i"+students.get(i).getId());
+                    students.set(i, student);
+                    return new Response(true,"student info is updated");
                 }
+
             }
-            return new Response(true,"student added");
         }
-    }*/
+        return new Response(false,"student info cannot be updated");
+    }
 
     @RequestMapping(value="/students/{id}",method=RequestMethod.DELETE)
     public Response deleteStudent(@PathVariable("id") String id){
