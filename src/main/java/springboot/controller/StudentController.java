@@ -58,15 +58,33 @@ public class StudentController{
         }
     }
 
+    /* 1st method for the post operation */
+/*
     @RequestMapping(value="/students",method=RequestMethod.PUT)
     public Response  updateStudent(@RequestBody Student student){
-        //System.out.println("students"+students);
         if(student.getId()!=null){
             Iterator itr = students.iterator();
             for(int i=0; i < students.size(); i++)
             {
                 if(students.get(i).getId().equals(student.getId())){
-                   // System.out.println("student i"+students.get(i).getId());
+                    students.set(i, student);
+                    return new Response(true,"student info is updated");
+                }
+
+            }
+        }
+        return new Response(false,"student info cannot be updated");
+    }
+*/
+    /* 2nd method for the post operation */
+
+    @PutMapping("/students/{id}")
+    public Response  updateStudent(@RequestBody Student student, @PathVariable("id") String id){
+        if(student.getId()!=null){
+            Iterator itr = students.iterator();
+            for(int i=0; i < students.size(); i++)
+            {
+                if(students.get(i).getId().equals(id)){
                     students.set(i, student);
                     return new Response(true,"student info is updated");
                 }
