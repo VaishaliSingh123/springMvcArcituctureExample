@@ -2,5 +2,6 @@ com/springboot/controller/StudentController.class
 com/springboot/StudentApplication.class
 com/springboot/service/StudentService.class
 com/springboot/model/Course.class
+com/springboot/model/TwitterM.class
 com/springboot/model/Student.class
 com/springboot/model/Response.class

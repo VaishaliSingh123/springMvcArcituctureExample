@@ -2,16 +2,27 @@ package com.springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.springboot.service.StudentService;
+
 import com.springboot.model.Student;
 import com.springboot.model.Course;
+import com.springboot.model.TwitterM;
 import com.springboot.model.Response;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 import java.util.ListIterator;
+import twitter4j.Twitter;
+import twitter4j.User;
+import twitter4j.TwitterFactory;
+import twitter4j.TwitterException;
+import twitter4j.Status;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 
 @RestController
 public class StudentController{
@@ -26,6 +37,38 @@ public class StudentController{
 
     @RequestMapping(value="/students")
     public List<Student> retrieveStudents() {
+        /**
+         * reading twitter4j.properties file
+         */
+        try (InputStream input = new FileInputStream("/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/resources/twitter4j.properties")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+
+            // get the property value and print it out
+            System.out.println("cosumer key is"+prop.getProperty("oauth.consumerKey"));
+            System.out.println("cosumer key is"+prop.getProperty("oauth.consumerSecret"));
+            System.out.println("cosumer key is"+prop.getProperty("oauth.accessToken"));
+            System.out.println("cosumer key is"+prop.getProperty("oauth.accessTokenSecret"));
+
+            /**
+             * configration builder
+             */
+//            ConfigurationBuilder cb = new ConfigurationBuilder();
+//            cb.setDebugEnabled(true)
+//                    .setOAuthConsumerKey("*********************")
+//                    .setOAuthConsumerSecret("******************************************")
+//                    .setOAuthAccessToken("**************************************************")
+//                    .setOAuthAccessTokenSecret("******************************************");
+//            TwitterFactory tf = new TwitterFactory(cb.build());
+//            Twitter twitter = tf.getInstance();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
         return students;
     }
 
@@ -56,6 +99,27 @@ public class StudentController{
             students.add(student);
             return new Response(true,"student added");
         }
+    }
+
+    /**
+     * u need to check this
+     * @param tweetText
+     * @return
+     */
+    @RequestMapping(value="/vaishali",method=RequestMethod.POST)
+    public Response postTwitter(@RequestBody TwitterM tweetText){
+        try {
+            System.out.println("tweetText:"+tweetText.getTweet());
+            Twitter twitter = TwitterFactory.getSingleton();
+            Status status = twitter.updateStatus(tweetText.getTweet());
+            System.out.println("Successfully updated the status to [" + status.getText() + "].");
+            return new Response(true,"posted successfully");
+        } catch (TwitterException te) {
+            te.printStackTrace();
+            System.out.println("Failed to post at timeline: " + te.getMessage());
+            return  new Response(false,"unable to post post");
+        }
+         //return  new Response(false,"unable to post post");
     }
 
     /* 1st method for the post operation */
@@ -124,5 +188,25 @@ public class StudentController{
                }
            }
            return new Response(false,"unable to add student");
+    }
+
+    @RequestMapping("/vaishalitweet")
+    public Response getTwitterProp(){
+        try {
+            // gets Twitter instance with default credentials
+            Twitter twitter = new TwitterFactory().getInstance();
+            User user = twitter.verifyCredentials();
+            List<Status> statuses = twitter.getHomeTimeline();
+            System.out.println("Showing @" + user.getScreenName() + "'s home timeline.");
+            for (Status status : statuses) {
+                System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText() + "date-"+status.getCreatedAt()+"number od likes-"+status.getFavoriteCount());
+                return new Response(true,status.getText());
+            }
+        } catch (TwitterException te) {
+            te.printStackTrace();
+            System.out.println("Failed to get timeline: " + te.getMessage());
+            return  new Response(false,"unable to get post");
+        }
+        return  new Response(false,"unable to get post");
     }
 }
