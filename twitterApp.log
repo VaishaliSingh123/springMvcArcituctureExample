@@ -1,0 +1,9 @@
+2019-11-03 00:25:05,462 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 58409 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 00:25:05,463 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 00:25:05,962 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 00:25:05,962 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 00:25:05,990 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 00:25:06,171 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 0.928 seconds (JVM running for 1.194)
+2019-11-03 00:26:16,576 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-03 00:26:17,576 DEBUG com.springboot.controller.StudentController [http-nio-8081-exec-1] Getting successResponse for get Api
+2019-11-03 00:26:48,031 DEBUG com.springboot.controller.StudentController [http-nio-8081-exec-3] Getting successResponse for post Api
