@@ -1,0 +1,6 @@
+2019-11-02 23:31:37,939 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 57727 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-02 23:31:37,941 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-02 23:31:38,432 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-02 23:31:38,432 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-02 23:31:38,461 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-02 23:31:38,638 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 0.919 seconds (JVM running for 1.186)

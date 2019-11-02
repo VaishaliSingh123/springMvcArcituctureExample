@@ -23,9 +23,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
+
 
 @RestController
 public class StudentController{
+
+    private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
 
     @Autowired
     private StudentService studentService;
@@ -101,26 +109,6 @@ public class StudentController{
         }
     }
 
-    /**
-     * u need to check this
-     * @param tweetText
-     * @return
-     */
-    @RequestMapping(value="/vaishali",method=RequestMethod.POST)
-    public Response postTwitter(@RequestBody TwitterM tweetText){
-        try {
-            System.out.println("tweetText:"+tweetText.getTweet());
-            Twitter twitter = TwitterFactory.getSingleton();
-            Status status = twitter.updateStatus(tweetText.getTweet());
-            System.out.println("Successfully updated the status to [" + status.getText() + "].");
-            return new Response(true,"posted successfully");
-        } catch (TwitterException te) {
-            te.printStackTrace();
-            System.out.println("Failed to post at timeline: " + te.getMessage());
-            return  new Response(false,"unable to post post");
-        }
-         //return  new Response(false,"unable to post post");
-    }
 
     /* 1st method for the post operation */
 /*
@@ -200,13 +188,43 @@ public class StudentController{
             System.out.println("Showing @" + user.getScreenName() + "'s home timeline.");
             for (Status status : statuses) {
                 System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText() + "date-"+status.getCreatedAt()+"number od likes-"+status.getFavoriteCount());
+                logger.debug("Getting successResponse for get Api", status.getText());
                 return new Response(true,status.getText());
+
             }
         } catch (TwitterException te) {
             te.printStackTrace();
             System.out.println("Failed to get timeline: " + te.getMessage());
+            logger.debug("unable to get post", te.getMessage());
             return  new Response(false,"unable to get post");
         }
+
+        logger.debug("unable to get post");
         return  new Response(false,"unable to get post");
     }
+
+    /**
+     * u need to check this
+     * @param tweetText
+     * @return
+     */
+    @RequestMapping(value="/vaishali",method=RequestMethod.POST)
+    public Response postTwitter(@RequestBody TwitterM tweetText){
+        try {
+            System.out.println("tweetText:"+tweetText.getTweetText());
+            Twitter twitter = TwitterFactory.getSingleton();
+            Status status = twitter.updateStatus(tweetText.getTweetText());
+            System.out.println("Successfully updated the status to [" + status.getText() + "].");
+
+            logger.debug("Getting successResponse for post Api", status.getText());
+            return new Response(true,"posted successfully");
+        } catch (TwitterException te) {
+            te.printStackTrace();
+            System.out.println("Failed to post at timeline: " + te.getMessage());
+            logger.debug("unable to post post", te.getMessage());
+            return  new Response(false,"unable to post");
+        }
+        //return  new Response(false,"unable to post post");
+    }
+
 }

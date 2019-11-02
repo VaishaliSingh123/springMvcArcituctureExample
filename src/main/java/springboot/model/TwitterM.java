@@ -12,10 +12,10 @@ public class TwitterM{
         this.tweetText=tweetText;
     }
 
-    public String getTweet() {
+    public String getTweetText() {
         return this.tweetText;
     }
-    public void setTweet(String tweetText){
+    public void setTweetText(String tweetText){
         this.tweetText=tweetText;
     }
 
