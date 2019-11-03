@@ -7,3 +7,38 @@
 2019-11-03 00:26:16,576 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-11-03 00:26:17,576 DEBUG com.springboot.controller.StudentController [http-nio-8081-exec-1] Getting successResponse for get Api
 2019-11-03 00:26:48,031 DEBUG com.springboot.controller.StudentController [http-nio-8081-exec-3] Getting successResponse for post Api
+2019-11-03 12:10:13,696 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 59066 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 12:10:13,698 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 12:10:14,183 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 12:10:14,184 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 12:10:14,214 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 12:10:14,398 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 1.715 seconds (JVM running for 1.986)
+2019-11-03 12:10:45,022 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-03 12:11:58,369 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 59103 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 12:11:58,371 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 12:11:58,857 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 12:11:58,857 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 12:11:58,886 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 12:11:59,066 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 1.127 seconds (JVM running for 1.392)
+2019-11-03 12:12:04,294 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-03 12:12:46,465 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 59140 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 12:12:46,466 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 12:12:46,962 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 12:12:46,963 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 12:12:46,993 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 12:12:47,179 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 1.021 seconds (JVM running for 1.288)
+2019-11-03 12:12:51,593 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-03 12:13:34,784 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 59171 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 12:13:34,786 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 12:13:35,273 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 12:13:35,274 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 12:13:35,303 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 12:13:35,482 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 1.114 seconds (JVM running for 1.381)
+2019-11-03 12:13:38,799 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-03 12:14:12,102 INFO com.springboot.StudentApplication [restartedMain] Starting StudentApplication on LT6591 with PID 59203 (/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/target/classes started by vaishali.singh in /Users/vaishali.singh/Workspace/StudentResourceSpringBoot)
+2019-11-03 12:14:12,104 INFO com.springboot.StudentApplication [restartedMain] The following profiles are active: @spring.profiles.active@
+2019-11-03 12:14:12,586 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-11-03 12:14:12,586 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-11-03 12:14:12,615 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2019-11-03 12:14:12,797 INFO com.springboot.StudentApplication [restartedMain] Started StudentApplication in 0.953 seconds (JVM running for 1.22)
+2019-11-03 12:14:15,413 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'

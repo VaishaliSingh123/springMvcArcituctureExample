@@ -61,6 +61,15 @@ public class StudentController{
             System.out.println("cosumer key is"+prop.getProperty("oauth.accessToken"));
             System.out.println("cosumer key is"+prop.getProperty("oauth.accessTokenSecret"));
 
+            System.out.println("db key is"+prop.getProperty("db.user"));
+
+            prop.setProperty("db.user", "vaishali");
+
+            System.out.println("db key is"+prop.getProperty("db.user"));
+
+            System.out.println("db key is"+prop.keySet());
+
+            prop.forEach((k, v) -> System.out.println("Key : " + k + ", Value : " + v));
             /**
              * configration builder
              */
