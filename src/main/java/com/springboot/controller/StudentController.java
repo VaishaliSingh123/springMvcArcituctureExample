@@ -1,33 +1,26 @@
 package com.springboot.controller;
 
+import com.springboot.model.Course;
+import com.springboot.model.Response;
+import com.springboot.model.Student;
+import com.springboot.model.TwitterM;
+import com.springboot.service.StudentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import com.springboot.service.StudentService;
-
-import com.springboot.model.Student;
-import com.springboot.model.Course;
-import com.springboot.model.TwitterM;
-import com.springboot.model.Response;
-import org.springframework.web.bind.annotation.RestController;
-import java.util.*;
-import java.util.ListIterator;
-import twitter4j.Twitter;
-import twitter4j.User;
-import twitter4j.TwitterFactory;
-import twitter4j.TwitterException;
-import twitter4j.Status;
-
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.*;
+import twitter4j.*;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
 
 
 
@@ -184,16 +177,16 @@ public class StudentController{
 
     @RequestMapping(value="/students/{id}",method=RequestMethod.DELETE)
     public Response deleteStudent(@PathVariable("id") String id){
-           Iterator itr = students.iterator();
-           while (itr.hasNext())
-           {
-               Student oneStd=(Student)itr.next();
-               if(oneStd.getId().equals(id)){
-                   itr.remove();
-                   return new Response(true,"Student successfully deleted");
-               }
-           }
-           return new Response(false,"unable to add student");
+        Iterator itr = students.iterator();
+        while (itr.hasNext())
+        {
+            Student oneStd=(Student)itr.next();
+            if(oneStd.getId().equals(id)){
+                itr.remove();
+                return new Response(true,"Student successfully deleted");
+            }
+        }
+        return new Response(false,"unable to add student");
     }
 
     @RequestMapping("/vaishalitweet")

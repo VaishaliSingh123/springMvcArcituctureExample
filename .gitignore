@@ -3,3 +3,4 @@
 /twitterApp.log
 /target
 /myproject.iml
+ src/main/resources/twitter4j.properties
