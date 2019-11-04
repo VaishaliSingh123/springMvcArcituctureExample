@@ -1,7 +1,7 @@
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/model/TwitterM.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/model/Response.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/model/Course.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/StudentApplication.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/controller/StudentController.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/model/Student.java
-/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/springboot/service/StudentService.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/model/Course.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/model/Student.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/model/TwitterM.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/StudentApplication.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/model/Response.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/service/StudentService.java
+/Users/vaishali.singh/Workspace/StudentResourceSpringBoot/src/main/java/com/springboot/controller/StudentController.java

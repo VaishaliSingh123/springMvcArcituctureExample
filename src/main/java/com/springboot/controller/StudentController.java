@@ -1,5 +1,8 @@
 package com.springboot.controller;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import com.springboot.service.StudentService;
 
@@ -30,17 +33,23 @@ import org.slf4j.LoggerFactory;
 
 
 
+@Component
+@ConfigurationProperties
 @RestController
 public class StudentController{
 
     private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
+    private ArrayList<Student> students;
 
     @Autowired
     private StudentService studentService;
-    private ArrayList<Student> students;
+
+    @Autowired
+    private TwitterM twitterM;
 
     public StudentController(){
         this.students = new ArrayList<Student>();
+//        this.twitterM = new TwitterM();
     }
 
     @RequestMapping(value="/students")

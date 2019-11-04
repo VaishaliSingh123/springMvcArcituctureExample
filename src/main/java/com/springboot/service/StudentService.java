@@ -7,9 +7,10 @@ import java.util.Arrays;
 
 import com.springboot.model.Course;
 import com.springboot.model.Student;
+import org.springframework.stereotype.Service;
 
 
-@Component
+@Service
 public class StudentService{
 
     private static List<Student> students=new ArrayList<>();
